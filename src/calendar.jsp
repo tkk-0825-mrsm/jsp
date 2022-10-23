@@ -60,7 +60,7 @@ ul {
       <li><input type="text" name="year" value="${param['year']}" /><label for="year">年
       </label><input type="text" name="month" value="${param['month']}" /><label for="month">月</label><input type="text" name="day" value="${param['day']}" /><label for="day">日</label></li>
       <li><input type="submit" value="送信" />
-      <li><c:out value="${fn:split(dates, '/')}" /> (<fmt:formatDate value="${date}" pattern="E" />)</li>
+      <li> <fmt:formatDate value="${date}" pattern="yyyy年MM月dd日（E）" /> </li>
       <li><c:out value="${event}" /></li>
     </ul>
   </form>
