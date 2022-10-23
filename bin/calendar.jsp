@@ -38,7 +38,8 @@
 
   // 画面で利用するための日付、イベント情報を保存
   session.setAttribute("dates", dates);  
-  session.setAttribute("date", Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant()));
+  Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+  session.setAttribute("date", date);
   
   String event = (String)eventMap.get(year + month + day);
   session.setAttribute("event", event);
